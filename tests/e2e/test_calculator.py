@@ -37,7 +37,8 @@ def test_e2e_calculation():
         page.fill('#b', '6')
         page.select_option('#op', '+')
         page.click('button:has-text("Calculer")')
-        page.wait_for_function('document.querySelector(".result-val") && document.querySelector(".result-val").innerText.trim() !== "—"', timeout=3000)
+        js = 'document.querySelector(".result-val")?.innerText.trim() !== "—"'
+        page.wait_for_function(js, timeout=3000)
         text = page.inner_text('#result')
         assert '13' in text
         page.wait_for_selector('#history-list li')

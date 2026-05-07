@@ -1,5 +1,4 @@
 import sqlite3
-import threading
 from flask import Flask, g, jsonify, request, render_template
 from calculator import core
 

@@ -1,3 +1,6 @@
+
+import pytest
+
 from calculator import core
 
 
@@ -15,9 +18,6 @@ def test_multiply():
 
 def test_divide():
     assert core.divide(8, 2) == 4
-
-
-import pytest
 
 
 def test_divide_by_zero():

@@ -1,11 +1,7 @@
-import threading
-import time
 import os
-import sqlite3
-
 import pytest
 
-from app import app, init_db, DB_PATH
+from app import app, init_db
 
 
 @pytest.fixture(autouse=True)
